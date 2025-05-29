@@ -1,5 +1,4 @@
 /* ===== GLOBAL STYLES ===== */
-
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +29,7 @@ section {
     transition: all 0.3s;
 }
 
-/* ===== SECTION 1: ===== */
+/* ===== SECTION 1: HERO ===== */
 .hero {
     background: white;
     text-align: center;
@@ -45,13 +44,6 @@ section {
     100% { transform: translateY(0); }
 }
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
@@ -61,6 +53,7 @@ section {
 
 .hero-buttons {
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .hero h1 {
@@ -131,12 +124,9 @@ section {
 
 .glass-icon:hover img {
     transform: scale(1.1);
-    box-shadow:
-        0 0 15px 5px rgba(255, 255, 255, 0.7);
-}   
+}
 
-
-/* ===== SECTION 2 ===== */
+/* ===== SECTION 2: HERO SECTION ===== */
 .hero-section {
     position: relative;
     width: 100%;
@@ -149,22 +139,15 @@ section {
     background: linear-gradient(160deg, #FF59FC, #6B1065, #5f099c, #90cbff);
     overflow: hidden;
 }
-  
+
 .content {
     z-index: 2;
 }
-  
+
 .content h1 {
     font-size: 60px;
     font-weight: bold;
     margin-bottom: 2rem;
-    transform: translateY(20px);
-    transition: opacity 1.6s ease, transform 1.6s ease;
-}
-  
-.content h1.animate {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .cta-button {
@@ -176,11 +159,11 @@ section {
     font-weight: bold;
     border-radius: 8px;
 }
-  
+
 .cta-button:hover {
     background-color: #890fcb;
 }
-  
+
 .device-wrapper {
     position: relative;
     z-index: 2;
@@ -189,25 +172,25 @@ section {
     align-items: center;
     justify-content: center;
 }
-  
+
 .device {
     max-height: 400px;
     position: absolute;
     transition: transform 0.5s;
 }
-  
+
 .front-device {
     left: 60px;
     z-index: 10;
     margin-top: 35%;
 }
-  
+
 .back-device {
     z-index: 1;
     margin-left: 25%;
     margin-bottom: 35%;
 }
-  
+
 .grid-overlay {
     position: absolute;
     top: 0px;
@@ -227,7 +210,7 @@ section {
     cursor: pointer;
 }
 
-/* ===== SECTION 3 ===== */
+/* ===== SECTION 3: TESTIMONIAL ===== */
 .testimonial {
     background: linear-gradient(100deg, #93abe6 10%, #fdfeff 70%);
     padding: 80px 20px;
@@ -246,7 +229,6 @@ section {
     justify-content: space-between;
 }
 
-/* Slider Container with Glassmorphism */
 .slider-container {
     position: relative;
     width: 370px;
@@ -254,7 +236,6 @@ section {
     margin-left: 40px;
     background: #d7e2eada;
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(13, 202, 239, 0.734);
     overflow: hidden;
@@ -288,7 +269,6 @@ section {
 .arrow.left { left: 0px; }
 .arrow.right { right: 0px; }
 
-/* Right Side Text */
 .ranked {
     flex: 1 1 40px;
     text-align: left;
@@ -308,11 +288,10 @@ section {
     color: #000743;
 }
 
-
 /* ===== SECTION 4: AUTOMATION ===== */
 .automation {
-    background: linear-gradient( #93abe6 5%, #000743 40%);
-    color: white;  
+    background: linear-gradient(#93abe6 5%, #000743 40%);
+    color: white;
     min-height: 650px;
     display: flex;
     align-items: center;
@@ -340,17 +319,6 @@ section {
     font-weight: 700;
 }
 
-@keyframes fadeSlideUp { 
-    from { 
-        opacity: 0; 
-        transform: translateY(50px); 
-    } 
-    to {
-        opacity: 1; 
-        transform: translateY(0); 
-    }
-}
-
 .automation .btn-yellow {
     background: #FF3366;
     color: white;
@@ -362,19 +330,193 @@ section {
     margin: 0 auto;
 }
 
-@keyframes scaleUp { 
-    from { 
-        opacity: 0; 
-        transform: scale(0.8); 
-    }
-    to { 
-        opacity: 1; 
-        transform: scale(1); 
-    } 
-}
-
 .btn-yellow:hover {
     background-color: violet;
 }
 
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+@media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
 
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .device-wrapper {
+        width: 100%;
+        position: static;
+        margin-top: 40px;
+    }
+
+    .device {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .front-device,
+    .back-device {
+        position: relative;
+        margin: 0 auto;
+        left: 0;
+    }
+
+    .ranked {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p,
+    .ranked .quote {
+        font-size: 1rem;
+    }
+
+    .automation h2 {
+        font-size: 3rem;
+    }
+
+    .slider-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .ranked h3 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content h1,
+    .automation h2 {
+        font-size: 2rem;
+    }
+
+    .btn,
+    .cta-button,
+    .btn-yellow {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 10px;
+    }
+
+    .section3 {
+        flex-direction: column;
+    }
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .content h1 {
+        font-size: 2.8rem;
+    }
+
+    .device-wrapper {
+        width: 50%;
+    }
+
+    .ranked {
+        margin-left: 50px;
+    }
+
+    .automation h2 {
+        font-size: 3.5rem;
+    }
+
+    .btn {
+        width: 50%;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .section3 {
+        justify-content: center;
+    }
+}
+
+/* Mobile Devices (less than 768px) */
+@media (max-width: 767px) {
+    section {
+        padding: 60px 4%;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .device-wrapper {
+        display: none;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .btn {
+        width: 80%;
+    }
+
+    .ranked {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .ranked h3 {
+        font-size: 2.2rem;
+    }
+
+    .slider-container {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .automation h2 {
+        font-size: 2.5rem;
+    }
+}
