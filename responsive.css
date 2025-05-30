@@ -1,0 +1,208 @@
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+@media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        /* Keep flex as row for devices to keep default positioning */
+        padding: 3rem 2rem;
+        height: auto; /* allow height to grow */
+        overflow: visible; /* prevent device clipping */
+    }
+
+    .device-wrapper {
+        width: 47%; /* keep original width */
+        position: relative;
+        margin-top: 0;
+    }
+
+    /* Adjust devices */
+    .device {
+        max-height: 300px; /* smaller devices */
+        position: absolute; /* keep default absolute */
+        transition: transform 0.5s;
+    }
+
+    .front-device {
+        left: 40px; /* slightly less left */
+        margin-top: 25%;
+        z-index: 10;
+    }
+
+    .back-device {
+        margin-left: 15%;
+        margin-bottom: 25%;
+        z-index: 1;
+    }
+
+    /* Keep content and button as is */
+    .content {
+        z-index: 2;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 2rem 1rem;
+        height: auto;
+        overflow: visible;
+    }
+
+    .device {
+        max-height: 180px;
+    }
+
+    .front-device {
+        left: 1px;
+        margin-top: 65%;
+    }
+
+    .back-device {
+        margin-left: 40%;
+        margin-bottom: 65%;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .cta-button {
+        width: 45%;
+        display: inline-flex;
+        padding: 0.8rem;
+        font-size: 10px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .device {
+        max-height: 160px;
+    }
+
+    .front-device {
+        left: 20px;
+        margin-top: 15%;
+    }
+
+    .back-device {
+        margin-left: 5%;
+        margin-bottom: 15%;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p,
+    .ranked .quote {
+        font-size: 1rem;
+    }
+
+    .automation h2 {
+        font-size: 3rem;
+    }
+
+    .automation .btn-yellow{
+        font-size: 1rem;
+        width: 40%;
+    }
+
+    .slider-container {
+        width: 100%;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .ranked h3 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        width: 35%;
+        font-size: 0.6rem;
+    }
+
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section3 {
+        flex-direction: column; /* stack vertically */
+        align-items: center;
+    }
+
+    .slider-container {
+        max-width: 70%;
+        height: 340px; /* nearly full width */  
+        aspect-ratio: 4 / 3; /* keep slider ratio */
+    }
+
+    .ranked {
+        max-width: 90vw;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 30px;
+        padding: 10px 0 0 0;
+    }
+
+    .ranked h3 {
+        font-size: 2.8rem;
+    }
+
+    .ranked .quote {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+    .testimonial {
+        padding: 40px 10px;
+    }
+
+    .ranked h3 {
+        font-size: 1.5rem;
+    }
+
+    .ranked .quote {
+        font-size: 0.95rem;
+    }
+
+    .arrow {
+        font-size: 2rem;
+    }
+}
