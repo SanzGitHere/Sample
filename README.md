@@ -1,4 +1,4 @@
-It demonstrates converting sections of a Figma UI design into responsive, accessible, and styled HTML pages using semantic HTML, CSS, and JavaScript.
+It demonstrates converting sections of a Figma UI design into responsive, accessible HTML pages using semantic HTML, CSS, and JavaScript.
 
 ## 📁 Project Structure
 eight25-assignment/
